@@ -65,11 +65,24 @@
       console.groupEnd(`${dog.name}`);
     });
 
-
-
     // counting
+    console.count('Lane');
+    console.count('Lane');
+    console.count('Mike');
+    console.count('Lane');
+    console.count('Mike');
 
     // timing
+
+    console.time('fetching data');
+    fetch('https://github.com/users/LaneHarvey')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+      console.table(dogs)
 
   </script>
 </body>
